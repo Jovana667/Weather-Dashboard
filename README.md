@@ -41,6 +41,7 @@ The Weather Dashboard is a web application designed to assist travelers plan the
 
 ## Deployed Application
 
+https://jovana667.github.io/Weather-Dashboard/
 
 ## License
 
