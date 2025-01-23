@@ -1,87 +1,145 @@
-body, html {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    background-color: #f0f0f0;
+body,
+html {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: #f0f0f0;
 }
 
 .container {
-    min-height: 100%;
-    display: flex;
-    flex-direction: column;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 h1 {
-    background: linear-gradient(to right, #4558b6, #3d48a1, #36368b, #261360);
-    color: white;
-    padding: 20px;
-    margin: 0;
-    text-align: center;
+  background: linear-gradient(to right, #4558b6, #3d48a1, #36368b, #261360);
+  color: white;
+  padding: 20px;
+  margin: 0;
+  text-align: center;
 }
 
 .dashboard {
-    display: flex;
-    flex: 1;
-    padding: 20px;
-    padding-right: 10%;
+  display: flex;
+  flex: 1;
+  padding: 20px;
+  padding-right: 10%;
 }
 
 .search-section {
-    flex: 1;
-    padding-right: 20px;
+  flex: 1;
+  padding-right: 20px;
 }
 
 .weather-display {
-    flex: 3;
+  flex: 3;
 }
 
-input, button {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border-radius: 3px;
-    box-sizing: border-box;
+input,
+button {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 3px;
+  box-sizing: border-box;
 }
 
 button {
-    background-color: #6991e3;
-    color: white;
-    border: none;
-    cursor: pointer;
-    margin-bottom: 30px;
+  background-color: #6991e3;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 30px;
 }
 
 button:hover {
-    background-color: #3a5a8c;
+  background-color: #3a5a8c;
 }
 
 #cityButtons button {
-    margin-bottom: 20px;
-    color: black;
-    background-color: #aeaeae;
+  margin-bottom: 20px;
+  color: black;
+  background-color: #aeaeae;
 }
 
-#currentWeather, #forecast {
-    background-color: white;
-    margin-bottom: 20px;
+#currentWeather,
+#forecast {
+  background-color: white;
+  margin-bottom: 20px;
 }
 
 #currentWeather {
-    padding: 20px;
-    border: 1px solid black;
+  padding: 20px;
+  border: 1px solid black;
 }
 
 #forecast {
-    display: flex;
-    justify-content: space-between;
-    background-color: transparent;
+  display: flex;
+  justify-content: space-between;
+  background-color: transparent;
 }
 
 .forecast-day {
-    background-color: #323d4f;
-    color: white;
+  background-color: #323d4f;
+  color: white;
+  padding: 10px;
+  width: 18%;
+  box-sizing: border-box;
+}
+
+@media (max-width: 430px) {
+  .dashboard {
     padding: 10px;
-    width: 18%;
-    box-sizing: border-box;
+    flex-direction: column;
+  }
+
+  .search-section {
+    width: 100%;
+    padding-right: 0;
+  }
+
+  #forecast {
+    display: block;
+  }
+
+  .forecast-day {
+    width: 100%;
+    margin-bottom: 5px;
+    padding: 15px;
+    font-size: 0.9rem;
+  }
+
+  #currentWeather {
+    padding: 15px;
+    margin-bottom: 15px;
+  }
+
+  #cityButtons button {
+    padding: 12px;
+    margin-bottom: 10px;
+  }
+
+  input {
+    padding: 12px;
+    font-size: 16px;
+  }
+}
+
+/* Additional styles for better spacing */
+@media (max-width: 430px) {
+  h1 {
+    font-size: 1.5rem;
+    padding: 15px;
+  }
+
+  .weather-display {
+    margin-top: 15px;
+  }
+
+  #currentWeather {
+    margin-bottom: 20px;
+    line-height: 1.4;
+  }
 }
